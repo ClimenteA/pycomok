@@ -2,7 +2,7 @@
 Access outlook emails using win32com!
 
 
-In progress:
+module is still in testing
 
 How to:
 
