@@ -3,19 +3,28 @@ Access outlook emails using win32com!
 https://docs.microsoft.com/en-us/office/vba/api/overview/outlook
 
 
-Short how to:
+## Instalation
+Copy pycomok.py file where you need it.
 
-Import the needed funcs (not many)
-
+## Usage
 ```
-from pycomok import get_outlook_mail_items, filter_items_by_date, get_items_data, send_email, get_mail_item
+from pycomok import Mail 
+m = Mail()
 ```
 
-#Get the mail items from 'planning' folder
+get_outlook_mail_items, filter_items_by_date, get_items_data, send_email, get_mail_item
+
+Send emails
+```
+m.send_email()
+```
+
+
+Get the mail items from 'afoldername' folder
 ```
 email = 'alincmt@gmail.com' # put the email address from which you want to get the mails
-mail_items_folder_path = "Inbox > planning" # here is the path to 'planning' outlook folder, use '>' for path 
-items = get_outlook_mail_items(email, mail_items_folder_path, True)
+mail_items_folder_path = "Inbox > afoldername" # here is the path to 'afoldername' outlook folder, use '>' for path 
+items = m.get_outlook_mail_items(email, mail_items_folder_path, True)
 ```
 Filter mail items by date (recomended if to many)
 ```
