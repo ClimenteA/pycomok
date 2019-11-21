@@ -26,7 +26,7 @@ Filter mail items by date (recomended if to many)
 ```
 mail_items = m.filter_items_by_date(items, starting_from_date="04-09-2019", until_date=None)
 ```
-Make a generator from the mail_items filtered and iterete over them to get data
+Make a generator from the mail_items filtered and iterate over them to get data
 ```
 gen_items = m.get_items_data(mail_items)
 
