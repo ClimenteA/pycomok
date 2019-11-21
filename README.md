@@ -12,14 +12,10 @@ from pycomok import Mail
 m = Mail()
 ```
 
-get_outlook_mail_items, filter_items_by_date, get_items_data, send_email, get_mail_item
-
-Send emails
+Send emails 
 ```
-m.send_email()
+m.send_email(subject, message, to, cc=None, attachments=[], display=True, send=True, html=True)
 ```
-
-
 Get the mail items from 'afoldername' folder
 ```
 email = 'alincmt@gmail.com' # put the email address from which you want to get the mails
@@ -28,11 +24,11 @@ items = m.get_outlook_mail_items(email, mail_items_folder_path, True)
 ```
 Filter mail items by date (recomended if to many)
 ```
-mail_items = filter_items_by_date(items, starting_from_date="04-09-2019", until_date=None)
+mail_items = m.filter_items_by_date(items, starting_from_date="04-09-2019", until_date=None)
 ```
 Make a generator from the mail_items filtered and iterete over them to get data
 ```
-gen_items = get_items_data(mail_items)
+gen_items = m.get_items_data(mail_items)
 
 for item_data in gen_items:
      break
@@ -51,7 +47,7 @@ item_data['MailItem'].SaveAs("absolute/path/name_of_file.msg")
 ```
 Here is the item generator
 ```
-item_generator = get_mail_item(bf_items)
+item_generator = m.get_mail_item(bf_items)
 
 i=0
 for item in item_generator:
