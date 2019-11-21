@@ -3,10 +3,10 @@ Access outlook emails using win32com!
 https://docs.microsoft.com/en-us/office/vba/api/overview/outlook
 
 
-## Instalation
+### Instalation
 Copy pycomok.py file where you need it.
 
-## Usage
+### Usage
 ```
 from pycomok import Mail 
 m = Mail()
