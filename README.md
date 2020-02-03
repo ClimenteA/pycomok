@@ -1,4 +1,4 @@
-# pycomok [![Downloads](https://pepy.tech/badge/flaskwebgui)](https://pepy.tech/project/pycomok)
+# pycomok
 Access outlook emails using win32com!
 
 https://docs.microsoft.com/en-us/office/vba/api/overview/outlook
